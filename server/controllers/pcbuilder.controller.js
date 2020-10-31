@@ -1,4 +1,5 @@
 const PcBuilder = require("./../models/pcbuilder.model");
+//const Cpu = require("./../models/pcbuilder.model");
 
 module.exports = {
 	getAll:(req, res) => {

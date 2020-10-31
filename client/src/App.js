@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Router} from '@reach/router';
+import Motherboard from './components/Motherboard';
+import Cpu from './components/Cpu';
+import Gpu from './components/Gpu';
+import Hdd from './components/Hdd';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Motherboard path="/" />
+        <Cpu path="/cpu" />
+        <Gpu path="/gpu" />
+        <Hdd path="/hdd" />
+      </Router>
     </div>
   );
 }
